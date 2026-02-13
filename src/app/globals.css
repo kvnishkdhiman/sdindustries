@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base Colors */
+  --background: #FDFBF7; /* Very light creme */
+  --foreground: #2D2424; /* Deep brown-black */
+
+  /* Brand Colors */
+  --primary: #8B5E3C; /* Warm Brown */
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #E6DACE; /* Soft Beige */
+  --secondary-foreground: #2D2424;
+
+  --accent: #D7CCC8; /* Muted Taupe */
+  --accent-foreground: #2D2424;
+  
+  --muted: #F5F5DC; /* Creme */
+  --muted-foreground: #6D4C41;
+
+  /* Specific Palette */
+  --creme: #F5F5DC;
+  --beige: #D7CCC8;
+  --brown: #5D4037;
+  --brown-dark: #3E2723;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* Custom Names */
+  --color-creme: var(--creme);
+  --color-beige: var(--beige);
+  --color-brown: var(--brown);
+  --color-brown-dark: var(--brown-dark);
+
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
 }
