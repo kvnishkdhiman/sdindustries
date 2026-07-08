@@ -2,27 +2,21 @@
 
 :root {
   /* Base Colors */
-  --background: #FDFBF7; /* Very light creme */
-  --foreground: #2D2424; /* Deep brown-black */
+  --background: #FFFFFF; /* Clean White */
+  --foreground: #1C1C1C; /* Dark Charcoal */
 
   /* Brand Colors */
-  --primary: #8B5E3C; /* Warm Brown */
+  --primary: #0B2A4A; /* Premium Steel Blue/Navy */
   --primary-foreground: #FFFFFF;
 
-  --secondary: #E6DACE; /* Soft Beige */
-  --secondary-foreground: #2D2424;
+  --secondary: #E4572E; /* Industrial Orange Accent */
+  --secondary-foreground: #FFFFFF;
 
-  --accent: #D7CCC8; /* Muted Taupe */
-  --accent-foreground: #2D2424;
+  --accent: #E4572E;
+  --accent-foreground: #FFFFFF;
   
-  --muted: #F5F5DC; /* Creme */
-  --muted-foreground: #6D4C41;
-
-  /* Specific Palette */
-  --creme: #F5F5DC;
-  --beige: #D7CCC8;
-  --brown: #5D4037;
-  --brown-dark: #3E2723;
+  --muted: #F5F6F7; /* Light Gray Background */
+  --muted-foreground: #666666;
 }
 
 @theme inline {
@@ -40,12 +34,6 @@
 
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
-
-  /* Custom Names */
-  --color-creme: var(--creme);
-  --color-beige: var(--beige);
-  --color-brown: var(--brown);
-  --color-brown-dark: var(--brown-dark);
 
   --font-sans: var(--font-inter);
 }
