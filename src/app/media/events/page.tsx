@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Calendar, MapPin } from "lucide-react";
 
 export const metadata = {
@@ -24,14 +23,16 @@ export default function Events() {
             {
               title: "International Steel Expo 2026",
               date: "November 12-15, 2026",
-              location: "Pragati Maidan, New Delhi, India",
+              // TODO: Replace with verified event location from official records
+              location: "Convention Center, City, State, Country",
               desc: "SD Industries is showcasing modern automated mill speed controls and custom walking beam furnace heat models at Booth 4B-12. Drop by to review technical blueprints with our senior design staff."
             },
             {
-              title: "Ludhiana Engineering and Safety Symposium",
+              // TODO: Verify event details from official records
+              title: "Engineering and Safety Symposium",
               date: "September 08, 2026",
-              location: "Ludhiana Engineering Club, Punjab, India",
-              desc: "Our founder & Chairman Mr. Sushil Dhiman is presenting the keynote paper on modern rolling mill safety improvements, automated shearing guards, and high load cardan shafts stability controls."
+              location: "Engineering Club, City, State, Country",
+              desc: "Our founder & Chairman is presenting the keynote paper on modern rolling mill safety improvements, automated shearing guards, and high load cardan shafts stability controls."
             }
           ].map((item, idx) => (
             <div key={idx} className="border border-[#E0E0E0] p-8 rounded-[4px] bg-[#F5F6F7] space-y-4">

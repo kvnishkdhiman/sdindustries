@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FileText, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 export const metadata = {
   title: "Latest News | SD Industries",
@@ -15,26 +15,29 @@ export default function News() {
             <strong>Latest</strong> News
           </h1>
           <p className="text-muted-foreground mt-2 font-body text-lg">
-            Stay informed with corporate announcements, overseas contracts, and commissioning milestones from Ludhiana.
+            Stay informed with corporate announcements, overseas contracts, and commissioning milestones.
           </p>
         </div>
 
         <div className="space-y-8">
           {[
             {
+              // TODO: Verify news item from official records
               title: "Expanding Greenfield Presence in East Africa",
               date: "May 14, 2026",
-              desc: "SD Industries has finalized a complete design, engineering, and equipment coordination contract with a prominent structural steel producer in Kenya. The project covers a new multi-stand rolling layout designed to roll heavy structural sections."
+              desc: "SD Industries has finalized a complete design, engineering, and equipment coordination contract with a prominent structural steel producer in Country A. The project covers a new multi-stand rolling layout designed to roll heavy structural sections."
             },
             {
-              title: "Successful Commissioning of TMT Mill Upgrade in Gujarat",
+              // TODO: Verify news item from official records
+              title: "Successful Commissioning of TMT Mill Upgrade",
               date: "March 18, 2026",
-              desc: "Our automation and design divisions successfully completed structural upgrades and sequence tuning for a major steel mill operator in Gujarat. The deployment of smart loops resulted in an instant daily capacity yield increase of 12%."
+              desc: "Our automation and design divisions successfully completed structural upgrades and sequence tuning for a major steel mill operator in Region B. The deployment of smart loops resulted in an instant daily capacity yield increase of 12%."
             },
             {
-              title: "Metallurgy Delegates Visit Ludhiana Production Facility",
+              // TODO: Verify news item from official records
+              title: "Metallurgy Delegates Visit Production Facility",
               date: "January 22, 2026",
-              desc: "A foreign engineering delegation inspected our Ludhiana manufacturing plants. The visit focused on inspecting our case-hardened custom rolling mill gearbox fabrications and high precision stands tolerance matching."
+              desc: "A foreign engineering delegation inspected our manufacturing plants. The visit focused on inspecting our case-hardened custom rolling mill gearbox fabrications and high precision stands tolerance matching."
             }
           ].map((item, idx) => (
             <div key={idx} className="space-y-3">

@@ -9,6 +9,7 @@ export default function MillStands() {
   return (
     <ProductTemplate
       title="Mill Stands"
+      titleHighlight="Mill Stands"
       subtitle="Cartridge, housingless, and standard 3-High/2-High rolling mill stands."
       description="Our mill stands are built to withstand extreme mechanical dynamic loads. Engineered using high-grade structural casting, SD Industries mill stands maintain tight tolerances during the hot deformation process, ensuring consistent thickness and profile."
       features={[

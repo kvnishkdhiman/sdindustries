@@ -9,6 +9,7 @@ export default function ReheatingFurnace() {
   return (
     <ProductTemplate
       title="Reheating Furnace"
+      titleHighlight="Reheating Furnace"
       subtitle="Energy-efficient walking beam and pusher type reheating systems."
       description="SD Industries reheating furnaces are calibrated to yield maximum thermal productivity. Our customized thermodynamic designs reduce fuel wastage, lower scaling losses, and optimize specific heat requirements per ton of steel processed."
       features={[

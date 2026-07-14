@@ -1,14 +1,15 @@
-import { Globe, Users, Trophy } from "lucide-react";
+import { Globe, Trophy } from "lucide-react";
 
 export const metadata = {
-    title: "Our Clients | SK Steels",
-    description: "Join our network of 100+ satisfied clients across the globe.",
+    title: "Our Clients | SD Industries",
+    description: "Join our network of satisfied clients across the globe.",
 };
 
 export default function Clients() {
     const clients = Array.from({ length: 12 }, (_, i) => ({
         name: `Steel Co. ${i + 1}`,
-        location: i % 3 === 0 ? "India" : i % 3 === 1 ? "Africa" : "Middle East",
+        // TODO: Replace with verified client locations
+        location: i % 3 === 0 ? "Country A" : i % 3 === 1 ? "Country B" : "Country C",
         id: i,
     }));
 
@@ -50,7 +51,7 @@ export default function Clients() {
             </div>
 
             <div className="text-center mt-16">
-                <p className="text-muted-foreground italic">And many more throughout India, Southeast Asia, and Africa.</p>
+                <p className="text-muted-foreground italic">And many more worldwide.</p>
             </div>
         </div>
     );

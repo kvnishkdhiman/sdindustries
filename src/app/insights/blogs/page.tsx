@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { BookOpen, User, Calendar } from "lucide-react";
+import { User, Calendar } from "lucide-react";
 
 export const metadata = {
   title: "Blogs & Technical Insights | SD Industries",

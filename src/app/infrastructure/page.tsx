@@ -2,7 +2,7 @@ import { ShieldCheck, HardHat, Warehouse } from "lucide-react";
 
 export const metadata = {
   title: "Manufacturing Infrastructure | SD Industries",
-  description: "Take a tour of our Ludhiana machine tooling shop, custom test beds, and assembly floors.",
+  description: "Take a tour of our machine tooling shop, custom test beds, and assembly floors.",
 };
 
 export default function Infrastructure() {
@@ -13,14 +13,16 @@ export default function Infrastructure() {
           <h1 className="text-4xl font-bold font-heading text-[#0B2A4A]">
             <strong>Our</strong> Infrastructure
           </h1>
+          {/* TODO: Replace with verified facility location */}
           <p className="text-muted-foreground mt-2 font-body text-lg">
-            Inside our machining and manufacturing division located in Ludhiana, Punjab.
+            Inside our machining and manufacturing division.
           </p>
         </div>
 
+        {/* TODO: Verify facility size from official records */}
         <div className="space-y-6 text-[#1C1C1C]/80 leading-relaxed font-body">
           <p>
-            SD Industries operates a highly integrated heavy engineering shop spanning over 45,000 square feet. Outfitted with advanced horizontal boring machinery, CNC gear profile grinders, and computerized dynamic balancing test-beds, our facilities ensure all manufactured mill gearboxes and stands satisfy global technical tolerance limits.
+            SD Industries operates a highly integrated heavy engineering shop. Outfitted with advanced horizontal boring machinery, CNC gear profile grinders, and computerized dynamic balancing test-beds, our facilities ensure all manufactured mill gearboxes and stands satisfy global technical tolerance limits.
           </p>
         </div>
 

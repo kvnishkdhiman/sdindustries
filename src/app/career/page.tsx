@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Briefcase } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export const metadata = {
   title: "Careers at SD Industries | Join Our Engineering Team",
@@ -30,12 +30,14 @@ export default function Career() {
             {
               title: "Senior Mechanical Design Engineer",
               department: "Design & FEA Division",
-              location: "Ludhiana, Punjab, India",
+              // TODO: Replace with verified location
+              location: "City, State, Country",
               req: "B.Tech/M.Tech in Mechanical Engineering with 5+ years of experience modeling gear teeth profiles and rolling stands configurations using SolidWorks or ANSYS."
             },
             {
               title: "Lead Project Commissioning Engineer",
               department: "Project Consulting & Commissioning",
+              // TODO: Replace with verified location
               location: "On-site (Domestic & International travel required)",
               req: "Degree in Metallurgy or Mechanical Engineering. Minimum 4 years supervising hot mill trial sequences, billet alignments, and quenching systems calibrations."
             }
@@ -49,7 +51,7 @@ export default function Career() {
               <p className="text-sm text-[#1C1C1C]/85 font-body leading-relaxed">{job.req}</p>
               <div className="pt-2">
                 <Link
-                  href="mailto:careers@sdindustries.co.in"
+                  href="mailto:careers@example.com"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#E4572E] hover:underline"
                 >
                   <Mail size={16} /> Apply via Email

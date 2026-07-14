@@ -2,42 +2,47 @@ import Link from "next/link";
 import { ArrowRight, MapPin, Tag } from "lucide-react";
 
 export const metadata = {
-    title: "Our Success Stories | SK Steels",
+    title: "Our Success Stories | SD Industries",
     description: "Browse through our portfolio of successful Steel Plant, SMS, and Rolling Mill projects.",
 };
 
 const projects = [
     {
         title: "500 TPD Sponge Iron Plant",
-        location: "Raipur, Chhattisgarh",
+        // TODO: Replace with verified project locations from official records
+        location: "City A, State A",
         category: "Turnkey Project",
         desc: "Complete project management from civil layout to cold commissioning. Achieved 100% capacity within 3 months.",
         tags: ["Project Management", "Consultancy"],
     },
     {
         title: "Modern TMT Bar Rolling Mill",
-        location: "Durgapur, West Bengal",
+        // TODO: Replace with verified project locations from official records
+        location: "City B, State B",
         category: "Rolling Mill",
         desc: "Upgradation of existing mill to high-speed slit rolling technology, increasing yield by 15%.",
         tags: ["Rolling Mill", "Automation"],
     },
     {
         title: "25T Induction Furnace Installation",
-        location: "Bellary, Karnataka",
+        // TODO: Replace with verified project locations from official records
+        location: "City C, State C",
         category: "SMS",
         desc: "Installation and commissioning of energy-efficient induction furnaces with pollution control systems.",
         tags: ["SMS", "Energy Efficiency"],
     },
     {
         title: "Wire Rod Mill Expansion",
-        location: "Ludhiana, Punjab",
+        // TODO: Replace with verified project locations from official records
+        location: "City D, State D",
         category: "Rolling Mill",
         desc: "Capacity expansion project doubling the production from 100TPD to 200TPD with minimum downtime.",
         tags: ["Rolling Mill", "Expansion"],
     },
     {
         title: "Greenfield Integrated Steel Plant",
-        location: "Odisha",
+        // TODO: Replace with verified project locations from official records
+        location: "State E",
         category: "Consultancy",
         desc: "Feasibility study and basic engineering for a 0.5 MTPA integrated steel plant.",
         tags: ["Consultancy", "Feasibility"],

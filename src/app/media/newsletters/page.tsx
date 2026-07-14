@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { Mail, FileDown } from "lucide-react";
+import { FileDown } from "lucide-react";
 
 export const metadata = {
   title: "Newsletters | SD Industries",

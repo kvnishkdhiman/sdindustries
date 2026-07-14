@@ -2,31 +2,51 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { 
   ArrowRight, 
   CheckCircle, 
-  Globe, 
-  User,
-  Mail,
-  Phone,
-  MessageSquare
+  Globe
 } from "lucide-react";
 
-const slides = [
-  {
+export default function Home() {
+  const [inquiryProduct, setInquiryProduct] = useState("");
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "", spamHoney: "" });
+
+  const heroSlide = {
     image: "/assets/hero_bg.jpg",
     titleBold: "Bigger, Better and Stronger",
     titleRegular: "Your Reliable Partner in Steel Forming",
     desc: "SD Industries delivers turnkey metallurgy consultancy, advanced dynamic mechanical design, and high-performance manufacturing setups for rolling mills worldwide."
-  }
-];
+  };
 
-export default function Home() {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [inquiryProduct, setInquiryProduct] = useState("");
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "", spamHoney: "" });
+  const solutions = [
+    { id: "greenfield", title: "Greenfield Plant Consultancy", desc: "Complete end-to-end design, civil layout coordination, procurement assistance, and plant erection management.", link: "/solutions" },
+    { id: "brownfield", title: "Brownfield Plant Upgrades", desc: "Techno-economic modernization studies to boost output capacity, automate sequences, and upgrade mill gears.", link: "/solutions" },
+    { id: "tmt", title: "TMT Bar Mills", desc: "State-of-the-art structural layout designs for high-yield TMT bar processing, cooling beds, and thermex systems.", link: "/products/tmt-bar-mill" },
+    { id: "structural", title: "Structural Rolling Mills", desc: "Heavy machinery stand alignment layouts for channel, angle, beam, and customized profiles rolling.", link: "/products/structural-mill" },
+    { id: "wire-rod", title: "Wire Rod Rolling Mills", desc: "High-speed wire rod block integration, coiling layouts, laying head maintenance solutions, and spool handling.", link: "/products/wire-rod-mill" },
+    { id: "mill-stands", title: "Mill Stand Manufacturing", desc: "Rugged and precise housing, roll chocks, cardan shaft mounts, and custom mechanical tolerances designs.", link: "/products/mill-stands" },
+    { id: "reheating", title: "Reheating Furnaces", desc: "Walking beam and pusher type furnace design optimization, thermodynamic modeling, and fuel efficiency systems.", link: "/products/reheating-furnace" },
+    { id: "gearboxes", title: "Rolling Mill Gearboxes", desc: "High-torque speed reducers, custom drive gear sizing, pinions design, and alignment lubrication consulting.", link: "/products/rolling-mill-gearbox" },
+    { id: "custom", title: "Customised Steel Solutions", desc: "Special purpose shear alignment, automation control loops, tail-end guides, and custom mill tooling.", link: "/solutions" },
+  ];
+
+  const reasons = [
+    { id: "greenfield-brownfield", text: "Customized Greenfield & Brownfield plant engineering." },
+    { id: "dynamic-modeling", text: "Complete dynamic modeling for furnaces & mechanical stands." },
+    { id: "iso-standards", text: "Stringent adherence to ISO 9001:2015 manufacturing standards." },
+  ];
+
+  const clients = [
+    { id: "rsc", name: "RSC" },
+    { id: "sms", name: "SMS" },
+    { id: "vsc", name: "VSC" },
+    { id: "jsc", name: "JSC" },
+    { id: "bsc", name: "BSC" },
+    { id: "isc", name: "ISC" },
+  ];
 
   const handleInquirySubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -45,10 +65,11 @@ export default function Home() {
       <section className="relative h-[85vh] flex items-center overflow-hidden bg-[#0B2A4A] text-white">
         <div className="absolute inset-0 z-0">
           <Image
-            src={slides[activeSlide].image}
+            src={heroSlide.image}
             alt="SD Industries Steel Mill Banner"
             fill
             priority
+            sizes="100vw"
             className="object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0B2A4A]/90 via-[#0B2A4A]/70 to-transparent" />
@@ -57,13 +78,13 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10 w-full">
           <div className="max-w-3xl space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight font-heading">
-              {slides[activeSlide].titleBold} <br />
+              {heroSlide.titleBold} <br />
               <span className="font-normal text-white/95 text-2xl md:text-4xl block mt-2">
-                {slides[activeSlide].titleRegular}
+                {heroSlide.titleRegular}
               </span>
             </h1>
             <p className="text-sm md:text-base text-white/80 max-w-2xl font-body leading-relaxed">
-              {slides[activeSlide].desc}
+              {heroSlide.desc}
             </p>
             <div className="pt-4">
               <Link
@@ -82,13 +103,15 @@ export default function Home() {
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-2xl md:text-3xl font-heading text-[#0B2A4A] uppercase tracking-wider">
-              <strong>Leading Rolling Mill</strong> Consultants & Manufacturers in India
+              <strong>Leading Rolling Mill</strong> Consultants & Manufacturers
             </h2>
+            {/* TODO: Verify founding year, certifications, and location from official records */}
             <p className="text-sm text-[#1C1C1C]/80 leading-relaxed font-body">
               Established in 1998, SD Industries Pvt. Ltd. (a government-recognized Star Export House) has built a legacy of engineering excellence. We provide comprehensive, turn-key engineering setups, from basic design and manufacturing of mill stands to complete plant commissioning.
             </p>
+            {/* TODO: Verify location and certification details from official records */}
             <p className="text-sm text-[#1C1C1C]/80 leading-relaxed font-body">
-              Our advanced machining plants in Ludhiana are ISO 9001:2015 certified, highlighting our commitment to quality, efficiency, and compliance. We partner with metallurgical corporations across the globe to optimize structural steel mill, wire rod mill, and reheating furnace efficiencies.
+              Our advanced machining plants are ISO 9001:2015 certified, highlighting our commitment to quality, efficiency, and compliance. We partner with metallurgical corporations across the globe to optimize structural steel mill, wire rod mill, and reheating furnace efficiencies.
             </p>
             <div className="pt-2">
               <Link href="/about/who-we-are" className="text-[#E4572E] font-bold text-xs uppercase tracking-wider hover:underline flex items-center gap-1">
@@ -101,6 +124,7 @@ export default function Home() {
               src="/assets/who_we_are.jpg"
               alt="SD Industries Engineers reviewing blueprints"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -120,18 +144,8 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: "Greenfield Plant Consultancy", desc: "Complete end-to-end design, civil layout coordination, procurement assistance, and plant erection management.", link: "/solutions" },
-              { title: "Brownfield Plant Upgrades", desc: "Techno-economic modernization studies to boost output capacity, automate sequences, and upgrade mill gears.", link: "/solutions" },
-              { title: "TMT Bar Mills", desc: "State-of-the-art structural layout designs for high-yield TMT bar processing, cooling beds, and thermex systems.", link: "/products/tmt-bar-mill" },
-              { title: "Structural Rolling Mills", desc: "Heavy machinery stand alignment layouts for channel, angle, beam, and customized profiles rolling.", link: "/products/structural-mill" },
-              { title: "Wire Rod Rolling Mills", desc: "High-speed wire rod block integration, coiling layouts, laying head maintenance solutions, and spool handling.", link: "/products/wire-rod-mill" },
-              { title: "Mill Stand Manufacturing", desc: "Rugged and precise housing, roll chocks, cardan shaft mounts, and custom mechanical tolerances designs.", link: "/products/mill-stands" },
-              { title: "Reheating Furnaces", desc: "Walking beam and pusher type furnace design optimization, thermodynamic modeling, and fuel efficiency systems.", link: "/products/reheating-furnace" },
-              { title: "Rolling Mill Gearboxes", desc: "High-torque speed reducers, custom drive gear sizing, pinions design, and alignment lubrication consulting.", link: "/products/rolling-mill-gearbox" },
-              { title: "Customised Steel Solutions", desc: "Special purpose shear alignment, automation control loops, tail-end guides, and custom mill tooling.", link: "/solutions" },
-            ].map((card, idx) => (
-              <div key={idx} className="bg-white p-8 border border-[#E0E0E0] rounded-[4px] flex flex-col justify-between hover:shadow-md transition-shadow">
+            {solutions.map((card) => (
+              <div key={card.id} className="bg-white p-8 border border-[#E0E0E0] rounded-[4px] flex flex-col justify-between hover:shadow-md transition-shadow">
                 <div>
                   <h3 className="text-base font-bold text-[#0B2A4A] mb-3 uppercase tracking-wider">{card.title}</h3>
                   <p className="text-xs text-[#1C1C1C]/80 leading-relaxed mb-6 font-body">{card.desc}</p>
@@ -153,6 +167,7 @@ export default function Home() {
               src="/assets/product_sketch.jpg"
               alt="Rolling Mill Stand Blueprint"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -179,16 +194,17 @@ export default function Home() {
       </section>
 
       {/* Stats/Experience Counter Section */}
+      {/* TODO: Replace with verified company statistics from official records */}
       <section className="py-16 bg-[#0B2A4A] text-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "25+", label: "Years of Experience" },
-              { value: "12+", label: "Countries Served" },
-              { value: "3.5 Mn MT+", label: "Project Tonnage" },
-              { value: "150+", label: "Group Manpower" }
-            ].map((stat, idx) => (
-              <div key={idx} className="space-y-2">
+              { id: "years", value: "25+", label: "Years of Experience" },
+              { id: "countries", value: "12+", label: "Countries Served" },
+              { id: "tonnage", value: "3.5 Mn MT+", label: "Project Tonnage" },
+              { id: "manpower", value: "150+", label: "Group Manpower" },
+            ].map((stat) => (
+              <div key={stat.id} className="space-y-2">
                 <div className="text-3xl md:text-4xl font-extrabold text-[#E4572E] font-heading">{stat.value}</div>
                 <div className="text-xs font-bold uppercase tracking-widest text-white/80">{stat.label}</div>
               </div>
@@ -208,21 +224,18 @@ export default function Home() {
               Our consultation model targets direct return on investment (ROI). By structuring operations to minimize energy waste and optimizing stand speeds, we bring mill profitability into tight alignment with modern energy standards.
             </p>
             <ul className="space-y-3 font-body text-xs text-[#1C1C1C]/80 font-bold uppercase tracking-wider">
-              <li className="flex items-center gap-2">
-                <CheckCircle size={14} className="text-[#E4572E]" /> Customized Greenfield & Brownfield plant engineering.
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle size={14} className="text-[#E4572E]" /> Complete dynamic modeling for furnaces & mechanical stands.
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle size={14} className="text-[#E4572E]" /> Stringent adherence to ISO 9001:2015 manufacturing standards.
-              </li>
+              {reasons.map((reason) => (
+                <li key={reason.id} className="flex items-center gap-2">
+                  <CheckCircle size={14} className="text-[#E4572E]" /> {reason.text}
+                </li>
+              ))}
             </ul>
           </div>
           <div className="bg-[#F5F6F7] p-8 border border-[#E0E0E0] rounded-[4px] space-y-6">
             <h3 className="text-lg font-bold text-[#0B2A4A] uppercase tracking-wider">Client Endorsement</h3>
+            {/* TODO: Replace with verified client testimonial with permission */}
             <blockquote className="italic text-sm text-[#1C1C1C]/80 border-l-4 border-[#E4572E] pl-4 font-body">
-              "SD Industries delivered our TMT mill upgrade on schedule with zero downtime. Their consultancy team understood our exact tonnage requirements."
+              &ldquo;SD Industries delivered our TMT mill upgrade on schedule with zero downtime. Their consultancy team understood our exact tonnage requirements.&rdquo;
             </blockquote>
             <div className="text-xs font-bold uppercase tracking-wider">
               — Plant Head, Reliant Steel Corp
@@ -300,7 +313,7 @@ export default function Home() {
                 <input
                   type="tel"
                   required
-                  placeholder="+91 98765-43210"
+                  placeholder="+1 555 000 0000"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full border border-[#E0E0E0] rounded-[4px] p-2.5 text-xs bg-white"
@@ -341,8 +354,9 @@ export default function Home() {
               SD Industries serves critical metallurgy centers across the globe. Our engineering plans have guided construction, setups, and commissioning sequences across multiple international boundaries.
             </p>
             <p className="text-xs font-bold uppercase tracking-widest text-[#E4572E]">Countries actively served:</p>
+            {/* TODO: Replace with verified list of countries from official records */}
             <p className="text-sm text-[#1C1C1C]/80 font-body font-bold">
-              India, UAE, Bangladesh, Nepal, Vietnam, Indonesia, Nigeria, Kenya, Egypt, Saudi Arabia.
+              Country A, Country B, Country C, Country D, Country E, Country F, Country G, Country H, Country I, Country J.
             </p>
           </div>
           <div className="bg-[#F5F6F7] border border-[#E0E0E0] p-8 rounded-[4px] h-[300px] flex items-center justify-center">
@@ -361,10 +375,11 @@ export default function Home() {
             <h2 className="text-xl font-bold text-[#0B2A4A] uppercase tracking-wider">Trusted By Industrial Giants</h2>
             <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-2">Client Portfolio</p>
           </div>
+          {/* TODO: Replace placeholder client initials with verified client logos (with permission) */}
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-            {["RSC", "SMS", "VSC", "JSC", "BSC", "ISC"].map((client, idx) => (
-              <div key={idx} className="bg-white border border-[#E0E0E0] rounded-[4px] h-20 flex items-center justify-center font-bold text-[#0B2A4A]/40 text-xl tracking-wider select-none hover:border-[#E4572E] transition-colors">
-                {client}
+            {clients.map((client) => (
+              <div key={client.id} className="bg-white border border-[#E0E0E0] rounded-[4px] h-20 flex items-center justify-center font-bold text-[#0B2A4A]/40 text-xl tracking-wider select-none hover:border-[#E4572E] transition-colors">
+                {client.name}
               </div>
             ))}
           </div>

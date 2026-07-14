@@ -9,6 +9,7 @@ export default function StructuralMill() {
   return (
     <ProductTemplate
       title="Structural Mill"
+      titleHighlight="Structural Mill"
       subtitle="Heavy-duty rolling stand layouts for structural shapes (Channels, Angles, I-Beams)."
       description="We design and supply heavy section structural mills capable of rolling highly precise geometric profiles. Our consulting layouts focus on maintaining optimal structural cooling configurations to reduce thermal distortion and alignment issues."
       features={[

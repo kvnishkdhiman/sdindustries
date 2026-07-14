@@ -1,10 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { MessageSquare } from "lucide-react";
 
 export const metadata = {
   title: "Chairman's Message | SD Industries",
-  description: "Read the official statement and founding vision from Mr. Sushil Dhiman, Chairman of SD Industries.",
+  description: "Read the official statement and founding vision from the Chairman of SD Industries.",
 };
 
 export default function ChairmanMessage() {
@@ -13,20 +12,21 @@ export default function ChairmanMessage() {
       <div className="container mx-auto px-6 max-w-3xl space-y-8">
         <div className="border-b border-[#E0E0E0] pb-6">
           <h1 className="text-4xl font-bold font-heading text-[#0B2A4A]">
-            <strong>Chairman's</strong> Message
+            <strong>Chairman&apos;s</strong> Message
           </h1>
           <p className="text-muted-foreground mt-2 font-body text-lg">
-            A message from our founder & chairman, Mr. Sushil Dhiman.
+            A message from our founder & chairman.
           </p>
         </div>
 
         <div className="space-y-6 text-[#1C1C1C]/80 leading-relaxed font-body text-base">
           <p className="text-xl italic text-[#0B2A4A] border-l-4 border-[#E4572E] pl-6 font-serif my-6">
-            "Since our founding, SD Industries has stood for one principle — engineering that never compromises. Every rolling mill we consult on carries that promise forward."
+            &ldquo;Since our founding, SD Industries has stood for one principle &mdash; engineering that never compromises. Every rolling mill we consult on carries that promise forward.&rdquo;
           </p>
 
           <p>
-            Welcome to SD Industries. When we initiated operations in 1998, the rolling mill sector in India faced massive challenges regarding energy efficiency and specific fuel consumption. We recognized that B2B steel mill operators required more than generic vendor parts; they needed customized, scientific layout consultation that translates directly into operational uptime.
+            {/* TODO: Verify founding year and details from official records */}
+            Welcome to SD Industries. When we initiated operations in 1998, the rolling mill sector faced massive challenges regarding energy efficiency and specific fuel consumption. We recognized that B2B steel mill operators required more than generic vendor parts; they needed customized, scientific layout consultation that translates directly into operational uptime.
           </p>
 
           <p>
@@ -40,7 +40,8 @@ export default function ChairmanMessage() {
 
         <div className="pt-6 border-t border-[#E0E0E0] flex items-center justify-between">
           <div>
-            <h4 className="font-bold text-[#0B2A4A] text-lg">Mr. Sushil Dhiman</h4>
+            {/* TODO: Replace with verified chairman name */}
+            <h4 className="font-bold text-[#0B2A4A] text-lg">Chairman Name</h4>
             <p className="text-sm text-muted-foreground font-semibold uppercase tracking-wider">Founder & Chairman, SD Industries</p>
           </div>
           <Link

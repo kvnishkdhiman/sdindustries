@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Hammer, Cog, ClipboardCheck, Shuffle } from "lucide-react";
 
 export const metadata = {

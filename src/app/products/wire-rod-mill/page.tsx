@@ -9,6 +9,7 @@ export default function WireRodMill() {
   return (
     <ProductTemplate
       title="Wire Rod Mill"
+      titleHighlight="Wire Rod Mill"
       subtitle="High speed wire rod block mills with customized laying heads."
       description="SD Industries delivers high-speed wire rod mill consultancies designed to maximize plant productivity. We ensure layout speeds of up to 80-110 m/s remain stable through precision block engineering and custom air-cooled Stelmor conveyor lines."
       features={[

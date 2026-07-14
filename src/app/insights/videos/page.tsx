@@ -28,7 +28,8 @@ export default function Videos() {
             {
               title: "High Torque Combine Reducer Custom Sizing Trial",
               duration: "2 mins 45 secs",
-              desc: "Inspection video of our Ludhiana test bed trials for a custom combination gearbox-cum-pinion stand built for heavy section intermediate stands."
+              // TODO: Replace with verified test facility location
+              desc: "Inspection video of our test bed trials for a custom combination gearbox-cum-pinion stand built for heavy section intermediate stands."
             }
           ].map((video, idx) => (
             <div key={idx} className="border border-[#E0E0E0] rounded-[4px] bg-[#F5F6F7] overflow-hidden">

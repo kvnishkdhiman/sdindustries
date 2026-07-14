@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2, FileText, BarChart3, HelpCircle } from "lucide-react";
+import { CheckCircle2, BarChart3 } from "lucide-react";
 
 export const metadata = {
   title: "Solutions | SD Industries",
@@ -42,7 +42,7 @@ export default function Solutions() {
         <div className="bg-[#F5F6F7] p-8 border border-[#E0E0E0] rounded-[4px] space-y-4">
           <h3 className="text-xl font-bold text-[#0B2A4A]">Customized Engineering Inquiries</h3>
           <p className="text-sm text-[#1C1C1C]/80 font-body">
-            Need special purpose shear controls, dynamic furnace heat tuning software, or custom mechanical stands alignments? Get in touch with our Ludhiana engineering desk.
+            Need special purpose shear controls, dynamic furnace heat tuning software, or custom mechanical stands alignments? Get in touch with our engineering desk.
           </p>
           <div className="pt-2">
             <Link

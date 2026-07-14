@@ -9,6 +9,7 @@ export default function RollingMillGearbox() {
   return (
     <ProductTemplate
       title="Rolling Mill Gearbox"
+      titleHighlight="Rolling Mill Gearbox"
       subtitle="High torque reduction gearboxes, combination gearboxes, and pinions."
       description="SD Industries engineering division fabricates custom, heavy-duty speed reducers capable of handling the severe reverse loading cycles common in rolling mills. All gear teeth profiles are ground and case hardened to ensure vibration-free transmission."
       features={[

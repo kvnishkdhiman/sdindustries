@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { CheckCircle, Award, Shield, FileText } from "lucide-react";
+import { Award, Shield, FileText } from "lucide-react";
 
 export const metadata = {
   title: "Who We Are | SD Industries",
@@ -25,15 +24,17 @@ export default function WhoWeAre() {
             <p>
               SD Industries Pvt. Ltd. is a globally recognized turnkey solutions provider specializing in the design, manufacture, erection, and commissioning of hot rolling mills and steel plant equipment. Founded in 1998, we have consistently pushed the boundaries of metallurgical engineering.
             </p>
+            {/* TODO: Verify number of countries served from official records */}
             <p>
-              Operating from Ludhiana, Punjab, we have grown from a local machinery manufacturing unit to an international consultancy serving clients across more than 12 countries. Our turnkey expertise spans Greenfield plant setup, Brownfield modernization, structural mills, and custom gearboxes.
+              Operating from our manufacturing facility, we have grown from a local machinery manufacturing unit to an international consultancy serving clients across multiple countries. Our turnkey expertise spans Greenfield plant setup, Brownfield modernization, structural mills, and custom gearboxes.
             </p>
           </div>
           <div className="relative h-[300px] border border-[#E0E0E0] rounded-[4px] overflow-hidden">
             <Image
-              src="/who_we_are.jpg"
+              src="/assets/who_we_are.jpg"
               alt="Engineers reviewing blueprints"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

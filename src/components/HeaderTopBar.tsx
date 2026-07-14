@@ -10,11 +10,13 @@ export default function HeaderTopBar() {
       </div>
       {/* Right side: contact & secondary links */}
       <div className="flex items-center gap-6 font-bold uppercase tracking-wider text-[10px]">
-        <Link href="tel:+919876543210" className="hover:text-[#0B2A4A] transition-colors">
-          +91 98765 43210
+        {/* TODO: Replace with verified phone number */}
+        <Link href="tel:+15550000000" className="hover:text-[#0B2A4A] transition-colors">
+          +1 555 000 0000
         </Link>
-        <Link href="mailto:info@sdindustries.co.in" className="hover:text-[#0B2A4A] transition-colors">
-          info@sdindustries.co.in
+        {/* TODO: Replace with verified email address */}
+        <Link href="mailto:info@example.com" className="hover:text-[#0B2A4A] transition-colors">
+          info@example.com
         </Link>
         <Link href="/career" className="hover:text-[#0B2A4A] transition-colors">
           Career

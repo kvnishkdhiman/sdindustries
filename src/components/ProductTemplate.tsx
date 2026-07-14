@@ -1,19 +1,30 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
 
+export interface ProductTemplateProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  features: string[];
+  applications: string[];
+  titleHighlight?: string;
+}
+
 export default function ProductTemplate({
   title,
   subtitle,
   description,
   features,
   applications,
-}: {
-  title: string;
-  subtitle: string;
-  description: string;
-  features: string[];
-  applications: string[];
-}) {
+  titleHighlight,
+}: ProductTemplateProps) {
+  // If titleHighlight is provided, use it; otherwise fallback to first word
+  const highlightText = titleHighlight || title.split(" ")[0];
+  const remainingText = titleHighlight
+    ? title.replace(titleHighlight, "").trim()
+    : title.split(" ").slice(1).join(" ");
+  const showHighlight = title.includes(highlightText);
+
   return (
     <div className="bg-white min-h-screen pt-8 pb-16">
       <div className="container mx-auto px-6 max-w-4xl space-y-12">
@@ -22,7 +33,14 @@ export default function ProductTemplate({
             &larr; Back to Home
           </Link>
           <h1 className="text-4xl font-bold font-heading text-[#0B2A4A] mt-4">
-            <strong>{title.split(" ")[0]}</strong> {title.split(" ").slice(1).join(" ")}
+            {showHighlight ? (
+              <>
+                <strong>{highlightText}</strong>{" "}
+                {remainingText}
+              </>
+            ) : (
+              title
+            )}
           </h1>
           <p className="text-muted-foreground mt-2 font-body text-lg">{subtitle}</p>
         </div>

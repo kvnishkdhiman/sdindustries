@@ -9,6 +9,7 @@ export default function TMTBarMill() {
   return (
     <ProductTemplate
       title="TMT Bar Mill"
+      titleHighlight="TMT Bar Mill"
       subtitle="High speed, automated hot rolling setups for reinforcing steel bars."
       description="SD Industries provides complete turnkey engineering layout advisory and equipment fabrication for high-yield Thermomechanically Treated (TMT) Bar Mills. Our designs emphasize precision temperature control loops during the water quenching phase to achieve optimal yield strengths."
       features={[
